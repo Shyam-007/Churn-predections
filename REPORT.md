@@ -30,7 +30,7 @@ vi) Feature Scaling:
 Numerical features like 'tenure', 'MonthlyCharges', and 'TotalCharges' were scaled using StandardScaler. This normalization step is essential to eliminate biases associated with differing ranges of data values, ensuring that each feature contributes equally to the model’s predictions.
 
 
-3)EDA findings
+3)EDA findings:
 Distributions and Descriptive Statistics
 
 i) Categorical Variables:
@@ -62,7 +62,7 @@ Gender Impact on Churn: Graphs showed no significant difference in churn between
 Internet Service Impact on Churn: Fiber optic users had a notably higher churn rate than DSL users, which could be due to higher expectations or reliability issues associated with high-speed internet services.
 Contract Length Impact on Churn: Short-term, month-to-month customers were much more likely to churn than those bound by longer contractual obligations. This visualization underscores the importance of contract length as a key factor in customer retention strategies.
 
-4) **Feature Engneering**
+4) Feature Engneering :
 I focused on developing a set of advanced features to enhance the predictive model's accuracy for customer churn at a telecommunications company. My goal was to delve deeper into the data to uncover more nuanced insights and strengthen the model's ability to forecast churn based on various customer behaviors and interactions with service offerings. Below, I outline the feature engineering techniques I employed, detailing the rationale and implementation for each.
 
 i) Total Charges Cubed
@@ -89,7 +89,7 @@ vi.Bundle Penetration
 Purpose: By measuring the number of service categories a customer subscribes to, this feature aims to determine if deeper integration with the company's services correlates with lower churn rates.
 Implementation: data['BundlePenetration'] = data[service_categories].gt(0).sum(axis=1)
 
-5) Model Selection
+5) Model Selection :
 In the process of developing a predictive model for customer churn, I explored several machine learning algorithms, including Logistic Regression, XGBoost, and Random Forest. Here, I detail the steps taken for model selection and the rationale behind choosing the best-performing model, followed by hyperparameter tuning to further refine its performance.
 
 i) Logistic Regression:
@@ -115,7 +115,7 @@ Purpose: Automates the process of finding the most effective parameters. It iter
 Implementation: Defined a parameter grid with a range of values for n_estimators, max_depth, etc., and conducted a grid search to find the combination that resulted in the best cross-validated accuracy.
 Outcome: The best parameters involved a higher number of trees, deeper trees, and a balance in the minimum samples per split, which enhanced the model’s ability to learn from the data without fitting excessively to the training set.
 
-6) Evaluation Result
+6) Evaluation Result :
 The chosen model, Random Forest Classifier, has been evaluated using a comprehensive set of performance metrics which are essential for understanding its effectiveness in predicting customer churn. Below, I provide a detailed assessment based on the key metrics: accuracy, precision, recall, F1-score, and the AUC score.
 Metrics Overview
 
@@ -144,7 +144,7 @@ Interpretation: The AUC score is close to 1, which is excellent. It measures the
 
 Thus performance metrics suggest that the Random Forest Classifier is highly effective in predicting churn. Its balanced precision and recall imply that it is capable of identifying most of the churn accurately without a significant number of false positives, which is essential for implementing effective customer retention strategies.
 
-7) Challenges faced
+7) Challenges faced :
 i). Data Quality and Integrity
 Challenge: The dataset had missing values and inconsistencies, especially in the TotalCharges field.
 Solution: Implemented data cleaning, handled missing values, and ensured consistency across the dataset for reliable modeling.
