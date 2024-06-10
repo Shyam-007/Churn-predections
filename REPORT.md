@@ -4,11 +4,11 @@ Assignment :
 Objective :
   The primary objective of this project is to develop a predictive model that can identify customers at risk of churning, enabling the company to take proactive measures to retain them.
 
-1) **Overview**:
+1) Overview:
 In this project, I aim to develop a predictive model for identifying customers at risk of churn within a telecommunications company. Utilizing a comprehensive dataset, I apply various machine learning techniques to predict churn behaviors, enabling targeted intervention strategies. The project involves rigorous data preprocessing, innovative feature engineering, and the application of models such as Logistic Regression, Random Forest, and Gradient Boosting, with a particular focus on addressing data imbalances and optimizing model performance to improve predictive accuracy.
 The dataset comprises 7,043 entries, each representing a customer, across 21 attributes. These attributes include customer demographics, account information, and service usage details, with the target variable being Churn.
 
-3) **Data Cleaning and Preprocessing**:
+3) Data Cleaning and Preprocessing:
 In the initial stages of the project, I focused on preparing the dataset for analysis and modeling, which involved several key steps to ensure data quality and usability:
 
 i) Data Loading: 
@@ -30,7 +30,7 @@ vi) Feature Scaling:
 Numerical features like 'tenure', 'MonthlyCharges', and 'TotalCharges' were scaled using StandardScaler. This normalization step is essential to eliminate biases associated with differing ranges of data values, ensuring that each feature contributes equally to the model’s predictions.
 
 
-3)**EDA findings**
+3)EDA findings
 Distributions and Descriptive Statistics
 
 i) Categorical Variables:
@@ -89,7 +89,7 @@ vi.Bundle Penetration
 Purpose: By measuring the number of service categories a customer subscribes to, this feature aims to determine if deeper integration with the company's services correlates with lower churn rates.
 Implementation: data['BundlePenetration'] = data[service_categories].gt(0).sum(axis=1)
 
-5) **Model Selection**
+5) Model Selection
 In the process of developing a predictive model for customer churn, I explored several machine learning algorithms, including Logistic Regression, XGBoost, and Random Forest. Here, I detail the steps taken for model selection and the rationale behind choosing the best-performing model, followed by hyperparameter tuning to further refine its performance.
 
 i) Logistic Regression:
@@ -115,7 +115,7 @@ Purpose: Automates the process of finding the most effective parameters. It iter
 Implementation: Defined a parameter grid with a range of values for n_estimators, max_depth, etc., and conducted a grid search to find the combination that resulted in the best cross-validated accuracy.
 Outcome: The best parameters involved a higher number of trees, deeper trees, and a balance in the minimum samples per split, which enhanced the model’s ability to learn from the data without fitting excessively to the training set.
 
-6)**Evaluation Result**
+6)Evaluation Result
 The chosen model, Random Forest Classifier, has been evaluated using a comprehensive set of performance metrics which are essential for understanding its effectiveness in predicting customer churn. Below, I provide a detailed assessment based on the key metrics: accuracy, precision, recall, F1-score, and the AUC score.
 Metrics Overview
 
@@ -144,7 +144,7 @@ Interpretation: The AUC score is close to 1, which is excellent. It measures the
 
 Thus performance metrics suggest that the Random Forest Classifier is highly effective in predicting churn. Its balanced precision and recall imply that it is capable of identifying most of the churn accurately without a significant number of false positives, which is essential for implementing effective customer retention strategies.
 
-7)**Challenges faced**
+7)Challenges faced
 i). Data Quality and Integrity
 Challenge: The dataset had missing values and inconsistencies, especially in the TotalCharges field.
 Solution: Implemented data cleaning, handled missing values, and ensured consistency across the dataset for reliable modeling.
